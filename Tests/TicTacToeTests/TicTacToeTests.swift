@@ -6,6 +6,12 @@ final class TicTacToeTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(TicTacToe().text, "Hello, World!")
+        let game = TicTacToe(firstPlayer: .cross)
+        game.play(moveIndex: 1)
+        print(game.allMovesInBoard)
+        print(game.board)
+        ConsoleDebugger.debug(game)
+        game.play(moveIndex: 4)
+        ConsoleDebugger.debug(game)
     }
 }
